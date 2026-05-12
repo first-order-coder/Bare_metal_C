@@ -4490,3 +4490,6 @@ java.lang.NullPointerException
 
 !ENTRY fr.ac6.mcu.debug 4 0 2026-05-12 23:56:12.420
 !MESSAGE Project no longer exists
+
+!ENTRY org.eclipse.core.jobs 2 2 2026-05-13 01:55:56.778
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.st.stm32ide.mpu.debug.ui.status.MPUWorkbenchWindowControlContribution$UIRefreshJob
