@@ -1,0 +1,23 @@
+/*
+ * prog_problems.c
+ *
+ *  Created on: May 12, 2026
+ *      Author: ginuram
+ */
+
+#include <stdio.h>
+#include <stdint.h>
+
+int main(void)
+{
+	uint8_t serialRegister = 0x00;
+
+	serialRegister = (serialRegister & ~0x0C) | 0x08;
+
+	uint8_t parity = (serialRegister >> 2) & 0x03;
+
+	printf("Register = 0x%02X\n", serialRegister);
+	printf("Parity = %u\n", parity);
+
+	return 0;
+}
