@@ -1,0 +1,21 @@
+/*
+ * size.c
+ *
+ *  Created on: May 12, 2026
+ *      Author: ginuram
+ */
+#include <stdio.h>
+
+int main()
+{
+	short int aShortInt;
+	int aInteger;
+	long int aLongInt;
+	long long int aLongLongInt;
+
+	printf("Size of (short int = %ld (bytes) %ld bits\n", sizeof(aShortInt), sizeof(aShortInt) * 8);
+	printf("Size of (short int = %ld (bytes) %ld bits\n", sizeof(aShortInt), sizeof(aInteger) * 8);
+	printf("Size of (short int = %ld (bytes) %ld bits\n", sizeof(aShortInt), sizeof(aShortInt) * 8);
+	printf("Size of (short int = %ld (bytes) %ld bits\n", sizeof(aShortInt), sizeof(aShortInt) * 8);
+}
+

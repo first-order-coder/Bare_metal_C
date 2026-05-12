@@ -1,3 +1,4 @@
+connectionTypeId=org.eclipse.remote.JSch
 connections/org.eclipse.remote.serial.core.connectionType/MPU+Serial/__internal_serial_connection_for_mpu=__internal_serial_connection_for_mpu
 connections/org.eclipse.remote.serial.core.connectionType/MPU+Serial/serial.baudRate=11
 connections/org.eclipse.remote.serial.core.connectionType/MPU+Serial/serial.byteSize=3

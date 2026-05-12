@@ -1,0 +1,60 @@
+/*
+ * bit_values.c
+ *
+ *  Created on: May 12, 2026
+ *      Author: ginuram
+ */
+#include <stdio.h>
+#include <stdint.h>
+
+const uint8_t MASTER_FAIL = (1 << 7); //shows if any error is present
+const uint8_t DATA_FAIL = (1 << 6); // indicates that inconsistent data was received
+const uint8_t OIL_LOW = (1 << 5); //oil container is low
+const uint8_t OIL_PRESSURE = (1 << 4); //oil pressure is low
+const uint8_t POWER_FAILURE = (1 << 3); //main power supply failure
+const uint8_t POSITION_FAULT = (1 << 2); //
+const uint8_t AIR_PRESSURE = (1 << 1);
+const uint8_t CLEAN_FILTER = (1 << 0);
+
+static void printLED(const uint8_t ledRegister)
+{
+	printf("Leds: ");
+	if ((MASTER_FAIL & ledRegister) != 0)
+		printf("MASTER_FAIL ");
+	if ((DATA_FAIL & ledRegister) != 0)
+			printf("DATA_FAIL ");
+	if ((OIL_LOW & ledRegister) != 0)
+			printf("OIL_LOW ");
+	if ((OIL_PRESSURE & ledRegister) != 0)
+			printf("OIL_PRESSURE_LOW ");
+	if ((POWER_FAILURE & ledRegister) != 0)
+			printf("POWER_FAIL ");
+	if ((POSITION_FAULT & ledRegister) != 0)
+			printf("WRONG_POSITION ");
+	if ((AIR_PRESSURE & ledRegister) != 0)
+			printf("AIR_PRESSURE_FAIL ");
+	if ((CLEAN_FILTER & ledRegister) != 0)
+			printf("FILTER_MUST_BE_CLEANED ");
+	printf("\n");
+}
+
+int main()
+{
+	uint8_t ledRegister = 0x00;
+	printLED(ledRegister);
+
+	//power went out
+
+	ledRegister |= MASTER_FAIL | POWER_FAILURE; //the power went out so the master and the power failure LEDs turn on
+	printLED(ledRegister);
+
+	//now the air went out
+	ledRegister |= AIR_PRESSURE;
+	printLED(ledRegister);
+
+	//power back air out so master is on;
+	ledRegister &= ~POWER_FAILURE; //invert all the bits to 1 except the power faliure bit
+	printLED(ledRegister);
+
+	return (0);
+}

@@ -1,0 +1,11 @@
+/*
+ * bit_values.c
+ *
+ *  Created on: May 12, 2026
+ *      Author: ginuram
+ */
+#include <stdio.h>
+#include <stdint.h>
+
+const uint8_t MASTER_FAIL = (1 << 7); //shows if any error is present
+
