@@ -27,10 +27,15 @@ int main(void)
 	GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
 	HAL_GPIO_Init(LED2_GPIO_PORT, &GPIO_InitStruct);
 
-	for(;;){
-		//Toggle LED
-		HAL_GPIO_TogglePin(LED2_GPIO_PORT, LED2_PIN);
-		HAL_Delay(400); //delay 400ms
-	};
+	int delays[] = {200, 600};
+	int length = sizeof(delays) / sizeof(delays[0]);
 
+	while (1)
+	{
+	    for (int i = 0; i < length; i++)
+	    {
+	        HAL_GPIO_TogglePin(LED2_GPIO_PORT, LED2_PIN);
+	        HAL_Delay(delays[i]);
+	    }
+	}
 }

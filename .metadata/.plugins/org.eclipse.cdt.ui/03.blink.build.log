@@ -1,6 +1,23 @@
-15:21:48 **** Incremental Build of configuration Debug for project 03.blink ****
+21:31:13 **** Incremental Build of configuration Debug for project 03.blink ****
 make -j16 all 
-make: Nothing to be done for 'all'.
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\ginuram\Desktop\Dekstop\bare_metal_c\03.blink\Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F030R8Tx -DNUCLEO_F030R8 -DDEBUG -DSTM32F030x8 -DUSE_HAL_DRIVER -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/03.blink/HAL_Driver/Inc/Legacy" -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/03.blink/Utilities/STM32F0xx-Nucleo" -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/03.blink/inc" -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/03.blink/CMSIS/device" -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/03.blink/CMSIS/core" -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/03.blink/HAL_Driver/Inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: 03.blink.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/03.blink/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "03.blink.elf" @"objects.list"   -lm
+Finished building target: 03.blink.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "03.blink.elf" "03.blink.bin"
+arm-none-eabi-size "03.blink.elf"
+   text	   data	    bss	    dec	    hex	filename
+   2780	   1088	   1092	   4960	   1360	03.blink.elf
+ 
 
-15:21:48 Build Finished (took 448ms)
+21:31:14 Build Finished (took 1s.475ms)
 

@@ -9,3 +9,5 @@
 1778587737372	Delete resource '04.ops'
 1778590441382	Delete resource '04_ops'
 1778618360409	Delete resource 'led_push_btn'
+1778666994389	Rename resource 'led_push_btn'
+1778667122400	Delete resource '05_led_push_btn/src/problems.c'
