@@ -1,0 +1,10 @@
+18:32:41 **** Rebuild of configuration Debug for project chapter_6 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o main.o "..\\main.c" 
+..\main.c:12:10: fatal error: stm32f0xx.h: No such file or directory
+   12 | #include "stm32f0xx.h"
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+
+18:32:41 Build Finished (took 103ms)
+

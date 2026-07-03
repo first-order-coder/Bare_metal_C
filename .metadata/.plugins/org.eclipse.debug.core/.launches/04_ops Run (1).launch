@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <launchConfiguration type="com.st.stm32ide.mpu.debug.config.launchConfigurationType">
 <stringAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME" value="Debug/04_ops.elf"/>
+<booleanAttribute key="org.eclipse.cdt.launch.PROGRAM_NAME_ACTIVATED" value="true"/>
 <stringAttribute key="org.eclipse.cdt.launch.PROJECT_ATTR" value="04_ops"/>
+<booleanAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_AUTO_ATTR" value="false"/>
+<stringAttribute key="org.eclipse.cdt.launch.PROJECT_BUILD_CONFIG_ID_ATTR" value=""/>
 </launchConfiguration>

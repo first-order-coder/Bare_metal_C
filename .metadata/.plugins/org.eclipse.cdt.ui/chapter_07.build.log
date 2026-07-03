@@ -1,0 +1,40 @@
+20:36:46 **** Incremental Build of configuration Debug for project chapter_07 ****
+make -j16 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\Users\ginuram\Desktop\Dekstop\bare_metal_c\chapter_07\Debug
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F0 -DSTM32F030R8Tx -DNUCLEO_F030R8 -DDEBUG -DSTM32F030x8 -DUSE_HAL_DRIVER -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/chapter_07/HAL_Driver/Inc/Legacy" -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/chapter_07/Utilities/STM32F0xx-Nucleo" -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/chapter_07/inc" -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/chapter_07/CMSIS/device" -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/chapter_07/CMSIS/core" -I"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/chapter_07/HAL_Driver/Inc" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:38:56: warning: format '%d' expects argument of type 'int', but argument 4 has type 'uint32_t {aka long unsigned int}' [-Wformat=]
+  printf("House -- Stories: %d Bedrooms %d Square Feet %d\n",
+                                                       ~^
+                                                       %ld
+    myHouse->stories, myHouse->bedrooms, myHouse->squareFeet);
+                                         ~~~~~~~~~~~~~~~~~~~
+../src/main.c:40:34: warning: format '%ld' expects argument of type 'long int', but argument 2 has type 'unsigned int' [-Wformat=]
+  printf("Size of the structure %ld\n", sizeof(myHouse));
+                                ~~^
+                                %d
+../src/main.c:43:6: warning: unused variable 'result' [-Wunused-variable]
+  int result = factor(x);
+      ^~~~~~
+../src/main.c:35:19: warning: 'myHouse' is used uninitialized in this function [-Wuninitialized]
+  myHouse->stories = 2;
+  ~~~~~~~~~~~~~~~~~^~~
+Finished building: ../src/main.c
+ 
+Building target: chapter_07.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -mfloat-abi=soft -T"C:/Users/ginuram/Desktop/Dekstop/bare_metal_c/chapter_07/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "chapter_07.elf" @"objects.list"   -lm
+Finished building target: chapter_07.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "chapter_07.elf" "chapter_07.bin"
+arm-none-eabi-size "chapter_07.elf"
+   text	   data	    bss	    dec	    hex	filename
+  31720	   2492	   1672	  35884	   8c2c	chapter_07.elf
+ 
+
+20:36:47 Build Finished (took 1s.406ms)
+

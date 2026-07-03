@@ -1,0 +1,6 @@
+18:29:30 **** Incremental Build of configuration Debug for project chapter_06 ****
+make -j16 all 
+make: Nothing to be done for 'all'.
+
+18:29:30 Build Finished (took 459ms)
+

@@ -1,0 +1,47 @@
+/**
+  ******************************************************************************
+  * @file    main.c
+  * @author  Ac6
+  * @version V1.0
+  * @date    01-December-2013
+  * @brief   Default main function.
+  ******************************************************************************
+*/
+
+
+#include "stm32f0xx.h"
+#include "stm32f0xx_nucleo.h"
+#include <stdio.h>
+#include <stdint.h>
+
+int factor(int x) //counting the factorial of a value
+{
+	if(x == 1)
+		return (1);
+	return (x * factor(x - 1));
+}
+			
+struct house {
+	uint8_t stories;	//Number of stories in the house
+	uint8_t bedrooms;	//Number of bedrooms
+	uint32_t squareFeet; //Size of the house
+};
+
+int main(void)
+{
+
+	struct house *myHouse;
+
+	myHouse->stories = 2;
+	myHouse->bedrooms = 4;
+	myHouse->squareFeet = 5000;
+	printf("House -- Stories: %d Bedrooms %d Square Feet %d\n",
+			myHouse->stories, myHouse->bedrooms, myHouse->squareFeet);
+	printf("Size of the structure %ld\n", sizeof(myHouse));
+
+	const int x = 5;
+	int result = factor(x);
+//	printf("The result is: %i", result);
+
+	return 0;
+}

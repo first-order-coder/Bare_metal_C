@@ -1,0 +1,9 @@
+18:34:55 **** Build of configuration Debug for project ch ****
+make all 
+Cannot run program "make": Launching failed
+
+Error: Program "make" not found in PATH
+PATH=[C:/Ac6/SystemWorkbench/jre/bin/server;C:/Ac6/SystemWorkbench/jre/bin;C:/Ac6/SystemWorkbench/jre/lib/amd64;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files\Python311\Scripts\;C:\Program Files\Python311\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\MATLAB\R2024a\runtime\win64;C:\Program Files\MATLAB\R2024a\bin;C:\Program Files\dotnet\;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Program Files (x86)\eParaksts Token Signing\;C:\Program Files\cursor\resources\app\bin;C:\Program Files\usbipd-win\;C:\msys64\mingw64\bin\ghdl.exe;;C:\Program Files\NVIDIA Corporation\NVIDIA App\NvDLISR;C:\msys64\mingw64\bin;C:\Users\ginuram\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\ginuram\AppData\Local\Programs\Antigravity\bin;C:\Ac6\SystemWorkbench]
+
+18:34:55 Build Finished (took 44ms)
+
